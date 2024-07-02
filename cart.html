@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coș de Cumpărături - Cadouri Handmade</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+          <a class="text-white navbar-brand" href="index.html"
+            >Cadouri Handmade</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Acasă</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="about.html">Despre Noi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="products.html">Produse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="contacts.html">Contact</a>
+              </li>
+              <li id="navCart" class="nav-item">
+                <a class="nav-link text-white" href="cart.html">
+                  <i class="fas fa-shopping-cart mr-1"></i> Coș (0)
+                </a>
+              </li>
+              <li id="navLog" class="nav-item">
+                <a class="nav-link text-white" href="loghezate.html"
+                  >Loghează-te</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto mt-8">
+      <h1 class="text-3xl font-bold text-center mb-8">Coș de Cumpărături</h1>
+      <div id="cartItems" class="bg-white p-6 rounded-lg shadow-lg"></div>
+      <div id="cartSummary" class="bg-white p-6 mt-8 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-4">Sumar Comandă</h2>
+        <div id="cartTotal" class="flex justify-between mb-2">
+          <span>Total:</span>
+          <span id="cartTotalAmount">0 Lei</span>
+        </div>
+        <button
+          id="clearCartBtn"
+          class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg"
+          onclick="clearCart()"
+        >
+          Golește Coșul
+        </button>
+        <button
+          id="finalizeOrderBtn"
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg mt-4"
+          onclick="finalizeOrder()"
+        >
+          Finalizează Comanda
+        </button>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-center text-lg-start mt-16 py-4">
+      <div class="text-center text-white">© 2024 Cadouri Handmade</div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

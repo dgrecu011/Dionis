@@ -3,12 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacte</title>
+    <title>Produse - Cadouri Handmade</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <style>
+      .product-card {
+        width: 200px;
+        height: 300px;
+        margin-bottom: 20px;
+      }
+      .product-card .card-body {
+        height: 180px;
+      }
+      .product-card img {
+        height: 120px;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
     <header id="header">
@@ -42,6 +65,11 @@
               <li class="nav-item">
                 <a class="nav-link text-white" href="contacts.html">Contact</a>
               </li>
+              <li id="navCart" class="nav-item">
+                <a class="nav-link text-white" href="cart.html">
+                  <i class="fas fa-shopping-cart mr-1"></i> Coș (0)
+                </a>
+              </li>
               <li id="navLog" class="nav-item">
                 <a class="nav-link text-white" href="loghezate.html"
                   >Loghează-te</a
@@ -52,14 +80,118 @@
         </div>
       </nav>
     </header>
-    <main></main>
-    <footer class="bg-dark text-center text-lg-start">
-      <div class="text-center text-white p-3">© 2024 Cadouri Handmade</div>
+    <div id="TextProduse" class="text-center text-3xl font-bold mb-8">
+      Produse
+    </div>
+
+    <main
+      class="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3"
+    >
+      <div class="bg-white rounded-lg shadow-lg product-card">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Produs 1</h2>
+          <p class="text-gray-700 mb-4">Descriere detaliată a produsului 1.</p>
+          <span class="text-gray-700 font-bold">100 Lei</span>
+        </div>
+        <img
+          src="https://via.placeholder.com/200x150"
+          alt="Produs 1"
+          class="w-full"
+        />
+        <button
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg add-to-cart w-full"
+          onclick="addToCart('produs1', 'Produs 1', 100)"
+        >
+          Adaugă în coș
+        </button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg product-card">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Produs 2</h2>
+          <p class="text-gray-700 mb-4">Descriere detaliată a produsului 2.</p>
+          <span class="text-gray-700 font-bold">120 Lei</span>
+        </div>
+        <img
+          src="https://via.placeholder.com/200x150"
+          alt="Produs 2"
+          class="w-full"
+        />
+        <button
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg add-to-cart w-full"
+          onclick="addToCart('produs2', 'Produs 2', 120)"
+        >
+          Adaugă în coș
+        </button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg product-card">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Produs 3</h2>
+          <p class="text-gray-700 mb-4">Descriere detaliată a produsului 3.</p>
+          <span class="text-gray-700 font-bold">90 Lei</span>
+        </div>
+        <img
+          src="https://via.placeholder.com/200x150"
+          alt="Produs 3"
+          class="w-full"
+        />
+        <button
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg add-to-cart w-full"
+          onclick="addToCart('produs3', 'Produs 3', 90)"
+        >
+          Adaugă în coș
+        </button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg product-card">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Produs 4</h2>
+          <p class="text-gray-700 mb-4">Descriere detaliată a produsului 4.</p>
+          <span class="text-gray-700 font-bold">80 Lei</span>
+        </div>
+        <img
+          src="https://via.placeholder.com/200x150"
+          alt="Produs 4"
+          class="w-full"
+        />
+        <button
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg add-to-cart w-full"
+          onclick="addToCart('produs4', 'Produs 4', 80)"
+        >
+          Adaugă în coș
+        </button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg product-card">
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2">Produs 5</h2>
+          <p class="text-gray-700 mb-4">Descriere detaliată a produsului 5.</p>
+          <span class="text-gray-700 font-bold">110 Lei</span>
+        </div>
+        <img
+          src="https://via.placeholder.com/200x150"
+          alt="Produs 5"
+          class="w-full"
+        />
+        <button
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg add-to-cart w-full"
+          onclick="addToCart('produs5', 'Produs 5', 110)"
+        >
+          Adaugă în coș
+        </button>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-center text-lg-start mt-16 py-4">
+      <div class="text-center text-white">© 2024 Cadouri Handmade</div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="cart.js"></script>
   </body>
 </html>
-<script src="js.js"></script>

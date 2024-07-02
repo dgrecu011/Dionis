@@ -11,7 +11,6 @@ document
     document.getElementById("message").value = "";
   });
 document;
-// js.js
 
 document.addEventListener("DOMContentLoaded", function () {
   const registerForm = document.getElementById("registerForm");

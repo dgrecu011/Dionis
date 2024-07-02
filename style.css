@@ -251,3 +251,11 @@ main {
 #formCardReg {
   margin-top: 200px;
 }
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+#TextProduse {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
